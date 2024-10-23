@@ -2,32 +2,187 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+@layer base{
+  :root {
+      --background: 27 27 27;
+      --foreground: 225 225 225;
+      --muted: 115 115 115;
+      --accent: 254 254 91;
+      /* #FEFE5B */
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+@layer utilities {
+  .pause{
+    animation-play-state:paused ;
+  }
+
+  /* .custom-bg {
+    @apply bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-inset hover: shadow-glass-sm
+  } */
+}
+
+/* @keyframes move{
+  0%{
+    transform: translate(0);
+  }
+    100% {
+      transform: translate(-100vh);
+    }
+}
+ */
+
+@keyframes bubbleMove {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100vh);
+    /* Slowly move bubbles upwards */
+    opacity: 0.5;
+    /* Slowly fade out */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ /* Shiny bubble effect */
+ .bubble-shiny {
+   background: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.7), rgba(173, 216, 230, 0.3));
+   /* Shine effect */
+   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.4);
+   /* Glowing effect */
+   filter: blur(1px);
+   /* Slight blur to enhance the glow */
+ }
+
+ /* Adjusting animation for smooth, slow bubble rise */
+ .bubble-shiny {
+   animation: bubbleMove linear infinite;
+ }
+ 
+
+
+
+ 
+
+ .fixed-inset {
+   position: fixed;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.7);
+ }
+
+ button {
+   cursor: pointer;
+ }
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.6s ease-out forwards;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.animate-glow {
+  animation: glow 1.5s infinite alternate;
+}
+
+
+/* For WebKit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  /* Background of the scrollbar track */
+  border-radius: 10px;
+  /* Round edges of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: cyan;
+  /* Color of the scrollbar thumb */
+  border-radius: 15px;
+  /* Round edges of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00bfff;
+  /* Color of the scrollbar thumb on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  /* Makes the scrollbar thinner */
+  scrollbar-color: rgb(150, 183, 183) rgba(0, 0, 0, 0.1);
+  /* Thumb and track color */
+}
+
+/* For Edge */
+@supports (-ms-overflow-style: scrollbar) {
+
+  /* Scrollbar styles for Edge */
+  ::-ms-scrollbar {
+    width: 12px;
+  }
+
+  ::-ms-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  ::-ms-scrollbar-thumb {
+    background: rgb(7, 105, 89);
+    border-radius: 15px;
+  }
+
+  ::-ms-scrollbar-thumb:hover {
+    background: rgb(7, 105, 89);
   }
 }
