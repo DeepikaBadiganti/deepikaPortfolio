@@ -116,7 +116,7 @@ export default function AboutMe() {
 
     const typingTimer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(typingTimer);
-  }, [typedText, isDeleting, loopNum]);
+  }, [typedText, isDeleting, loopNum, typingSpeed, roles]);
 
   return (
     <div className="w-full min-h-screen relative">
@@ -139,7 +139,7 @@ export default function AboutMe() {
             className="flex flex-col items-start md:text-center sm:text-left "
           >
             <h1 className="text-4xl  md:text-5xl font-bold mb-4">
-              Hi all👋, I'm <span className="text-blue-400">Deepika</span>
+              {`Hi all👋, I'm`} <span className="text-blue-400">Deepika</span>
             </h1>
             <p className=" text-2xl  md:text-3xl">
               I am a{" "}
@@ -208,7 +208,7 @@ export default function AboutMe() {
           className="flex flex-col items-center"
         >
           <p className="text-lg mb-8 text-center md:text-justify">
-            "I am a passionate web developer with a strong foundation in the
+            {`"I am a passionate web developer with a strong foundation in the
             MERN stack, dedicated to bringing creative visions to life through
             dynamic web applications. My journey in technology began with a deep
             curiosity for coding, and I have since honed my skills in
@@ -218,7 +218,7 @@ export default function AboutMe() {
             Always eager to learn and grow, I actively seek opportunities to
             enhance my skills and explore new tools and frameworks. My goal is
             to leverage my expertise to build websites that not only meet client
-            expectations but also provide exceptional user experiences."
+            expectations but also provide exceptional user experiences."`}`
           </p>
           <p className="text-lg mb-4">
             Get my <span className="text-green-500 font-bold">Resume</span>{" "}

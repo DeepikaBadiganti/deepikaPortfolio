@@ -56,17 +56,21 @@ const Sound = () => {
   useEffect(() => {
     const consent = localStorage.getItem("musicConsent");
     const consentTime = localStorage.getItem("consentTime");
-    if (consent && consentTime && new Date(consentTime).getTime() + 1 * 24 * 60 * 60 * 1000 > new Date() ){
+    if (
+      consent &&
+      consentTime &&
+      new Date(consentTime).getTime() + 1 * 24 * 60 * 60 * 1000 > new Date()
+    ) {
       setIsPlaying(consent === "true");
-      if(consent === "true"){
-        ["click","keydown","touchstart"].forEach((event) => {
+      if (consent === "true") {
+        ["click", "keydown", "touchstart"].forEach((event) => {
           document.addEventListener(event, handleFirstUserInteraction);
         });
       }
-    }else{
-        setShowModal(true)
+    } else {
+      setShowModal(true);
     }
-  },[])
+  }, [handleFirstUserInteraction]);
 
   const toggle = () => {
     const newState = !isPlaying

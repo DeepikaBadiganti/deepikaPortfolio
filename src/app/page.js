@@ -28,8 +28,7 @@ export default function Home() {
         viewport={{ once: true }}
         className="text-base text-cyan-100 font-semi-bold text-center"
       >
-        {" "}
-        Hello👋, Welcome To Deepika's Portfolio
+        {`Hello👋, Welcome To Deepika's Portfolio`}
       </motion.h1>
       <div className="w-full h-screen">
         {/* navigation and 3d component goes here */}

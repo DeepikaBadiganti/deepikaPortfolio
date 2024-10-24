@@ -29,9 +29,9 @@ export default function contact() {
             </h1>
           </div>
           <p className="text-center font-light text-sm xs:text-base">
-            I’m always open to new opportunities and collaborations. Feel free
+            {`I’m always open to new opportunities and collaborations. Feel free
             to reach out with any inquiries or just to say hello. Let's make
-            something great together!
+            something great together!`}
           </p>
         </div>
         <Form />
