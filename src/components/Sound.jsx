@@ -70,7 +70,7 @@ const Sound = () => {
     } else {
       setShowModal(true);
     }
-  }, [handleFirstUserInteraction]);
+  }, []);
 
   const toggle = () => {
     const newState = !isPlaying
