@@ -1,4 +1,3 @@
-
 export const BtnList = [
   { label: "Home", link: "/", icon: "home", newTab: false },
   { label: "About", link: "/about", icon: "about", newTab: false },
@@ -7,7 +6,7 @@ export const BtnList = [
   { label: "Contact", link: "/contact", icon: "contact", newTab: false },
   {
     label: "resume",
-    link: "/Resume.pdf",
+    link: "/Deepika_Resume.pdf",
     icon: "resume",
     newTab: true,
   },
@@ -177,5 +176,3 @@ export const projectsData = [
     demoLink: "https://deepikafoodmuch.ccbp.tech/",
   },
 ];
-
-

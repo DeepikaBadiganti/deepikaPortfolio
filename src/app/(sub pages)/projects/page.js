@@ -45,7 +45,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="absolute top-10 lg:right-1/3 md:center-1/3  transform -translate-x-1/2 bg-cyan-950 p-4 rounded-lg shadow-lg w-64 md:w-72 text-center border border-cyan-800 after:content-[''] after:block after:absolute after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:border-t-8 after:border-t-blue-300 after:border-l-8 after:border-l-transparent after:border-r-8 after:border-r-transparent animate-bounce"
+          className="absolute top-10  lg:right-1/3 md:center-1/3  transform -translate-x-1/2 bg-cyan-950 p-4 rounded-lg shadow-lg w-64 md:w-72 text-center border border-cyan-800 after:content-[''] after:block after:absolute after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:border-t-8 after:border-t-blue-300 after:border-l-8 after:border-l-transparent after:border-r-8 after:border-r-transparent animate-bounce"
         >
           <p className="text-sm text-slate-300">{dialogue}</p>
         </motion.div>

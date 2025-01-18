@@ -230,7 +230,7 @@ export default function AboutMe() {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            href="/Resume.pdf"
+            href="/Deepika_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center bg-green-500 rounded-full p-6 shadow-lg transition-transform transform hover:bg-green-600 hover:scale-110 hover:shadow-xl"
