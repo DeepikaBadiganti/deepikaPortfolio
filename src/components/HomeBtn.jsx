@@ -20,7 +20,11 @@ const HomeBtn = () => {
       aria-label={"home"}
       name={"home"}
     >
+<<<<<<< HEAD
       <span className="relative peer w-10 h-10 xs:w-14 xs:h-14  p-3 sm:p-4 hover:text-cyan-400">
+=======
+      <span className="relative peer w-10 h-10 xs:w-14 xs:h-14 p-3 sm:p-4 hover:text-cyan-400">
+>>>>>>> 7bf26b59ea973ad4445ab8bb41492255cc91b315
         <Home className="w-full h-auto" strokeWidth={1.5} />
         <span className="peer bg-transparent absolute top-0 left-0 w-full h-full"></span>
         <span className="absolute hidden peer-hover:block px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 bg-background text-foreground text-sm rounded-md  shadow-lg whitespace-nowrap">
